@@ -1,0 +1,19 @@
+<section>
+  <div class="general-container d-flex align-items-center justify-content-between">
+    <h5>PROMOÇÃO</h5>
+    <p>9 Produtos</p>
+  </div>
+
+  <div class="products-list row">
+    <div *ngFor="let product of products" class="card bg-transparent col-sm-4 content-product border border-0 px-5 py-3">
+      <img class="rounded-2" [src]="product.attributes.imageUrl" alt="Imagem do produto">
+      <div class="py-2">
+        <h4>{{ product.attributes.title }}</h4>
+        <div class="d-flex gap-1 align-items-center">
+          <span class="currency-symbol pt-1">R$</span>
+          <span class="currency-value">{{ product.attributes.value | currency : 'BRL': ''}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
