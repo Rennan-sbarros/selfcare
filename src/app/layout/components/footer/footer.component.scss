@@ -1,0 +1,36 @@
+@import '../../../../scss/base/variables';
+
+footer{
+  background-color: $branco;
+
+  & .footer-main-content{
+      border-top: 0.2px solid #A5A1A1;
+
+    & li{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    & .newsletter{
+        .form-control{
+          width: 320px;
+        }
+        .input-group-text{
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          background-color: $verde;
+          color: $branco;
+          font-weight: 800;
+        }
+    }
+  }
+
+  & .end-footer-content{
+      .icon{
+        width: 1.5rem;
+      }
+  }
+}
+
+
+
