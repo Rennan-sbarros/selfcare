@@ -1,7 +1,9 @@
 <section>
   <div class="general-container d-flex align-items-center justify-content-between">
     <h5>PROMOÇÃO</h5>
-    <p>9 Produtos</p>
+    <div *ngIf="products">
+      <span>{{products.length + this.productQuantityTitle}}</span>
+    </div>
   </div>
 
   <div class="products-list row">
