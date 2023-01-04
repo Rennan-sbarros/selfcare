@@ -5,7 +5,7 @@
   </div>
 
   <div class="products-list row">
-    <div *ngFor="let product of products" class="card bg-transparent col-sm-4 content-product border border-0 px-5 py-3">
+    <div *ngFor="let product of products | slice: start:end" class="card bg-transparent col-sm-4 content-product border border-0 px-5 py-3">
       <img class="rounded-2" [src]="product.attributes.imageUrl" alt="Imagem do produto">
       <div class="py-2">
         <h4>{{ product.attributes.title }}</h4>
@@ -15,5 +15,10 @@
         </div>
       </div>
     </div>
+  <app-pagination
+    [totalRecords]="products.length"
+    [recordsPerPage]="limit"
+    (onPageChange)="displayActivePage($event)">
+  </app-pagination>
   </div>
 </section>

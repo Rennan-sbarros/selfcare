@@ -8,10 +8,14 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent implements OnInit {
-  products!: Products[]
+  products: Products[] = []
+  activePage = 0;
+  start=0;
+  end=6;
+  limit=6;
 
   constructor(
-    private productsService: ProductsService
+    private productsService: ProductsService,
   ) { }
 
   ngOnInit(): void {
@@ -23,4 +27,11 @@ export class ProductsListComponent implements OnInit {
       this.products = res.data
     })
   }
+
+  displayActivePage(activePageNumber:number){
+    this.activePage = activePageNumber
+    this.end = activePageNumber*this.limit
+    this.start=this.end-this.limit;
+  }
 }
+
