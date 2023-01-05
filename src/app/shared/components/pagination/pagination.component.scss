@@ -1,0 +1,25 @@
+@import "../../../../scss/base/variables";
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.pagination{
+  --bs-pagination-color: #{$branco};
+  --bs-pagination-bg: #{$verde};
+  --bs-pagination-hover-color: #{$preto};
+
+  --bs-pagination-active-color: #{$preto};
+  --bs-pagination-active-bg: #{$branco};
+  --bs-pagination-active-border-color: #{$verde};
+
+  --bs-pagination-disabled-bg: #{$verde};
+  --bs-pagination-disabled-color: #{$branco};
+
+  --bs-pagination-border-radius: 0.5rem;
+
+  cursor: pointer;
+
+  border-bottom: 0;
+}
+
