@@ -1,0 +1,11 @@
+<div class="position-relative">
+  <i class="bi bi-search icon position-absolute top-50 start-0 translate-middle-y"></i>
+  <input
+    class="form-control search-input"
+    type="text"
+    placeholder="Busque o produto"
+    alt="search"
+    (keyup)="debounce.next($event.target)"
+    [value]="value"
+  >
+</div>
