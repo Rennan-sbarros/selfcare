@@ -10,6 +10,8 @@ import { ProductsService } from '../../services/products.service';
 export class ProductsListComponent implements OnInit {
   products: Products[] = []
 
+  filter = '';
+
   activePage = 0;
   start=0;
   end=6;
@@ -41,5 +43,10 @@ export class ProductsListComponent implements OnInit {
   quantityProducts(){
     this.products?.length > 1 ? this.productQuantityTitle = " Produtos"  : " Produto"
   }
+
+  setFilterValue(event: any): void {
+    this.filter = event as string;
+  }
+
 }
 
